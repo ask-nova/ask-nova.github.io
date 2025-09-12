@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nova for Pharma Reps - AI-powered companion for pharmaceutical sales representatives. Transform your HCP interactions, streamline compliance, and boost sales performance.">
+    <meta name="keywords" content="pharmaceutical sales, pharma reps, AI companion, HCP interactions, compliance, sales performance, healthcare professionals">
+    <title>Nova for Pharma Reps | AI Companion for Pharmaceutical Sales Representatives</title>
+    
+    <!-- Preconnect to font services -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- EmailJS for client-side email sending -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BBBR4LG0TZ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-BBBR4LG0TZ');
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <nav class="container nav-container">
+            <a href="index.html" class="logo">Ask-Nova <img src="assets/nova-icon.png" alt="Nova" style="width: 24px; height: 24px; margin-left: 0.5rem; vertical-align: middle;"></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li class="nav-item">
+                    <a href="solutions.html">Solutions</a>
+                    <div class="dropdown-menu">
+                        <a href="nova-pharma-reps.html">&nbsp;&nbsp;Nova for Pharma Reps</a>
+                        <a href="nova-msl.html"> &nbsp;&nbsp;Nova for MSL</a>
+                        <a href="nova-kam.html"> &nbsp;&nbsp;Nova for KAM</a>
+                        <a href="nova-med-devices.html"> &nbsp;&nbsp;Nova for Med Devices</a>
+                        <a href="nova-consumer-health.html"> &nbsp;&nbsp;Nova for Consumer Health</a>
+                        <a href="nova-animal-health.html"> &nbsp;&nbsp;Nova for Animal Health</a>
+                    </div>
+                </li>
+                <li><a href="integrations.html">Integrations</a></li>
+                <li><a href="#contact" class="btn btn-primary">Request Demo</a></li>
+            </ul>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Nova for Pharmaceutical Sales Representatives</h1>
+                    <p>Transform your HCP interactions with AI-powered intelligence. Navigate the competitive pharmaceutical landscape with confidence, compliance, and unprecedented efficiency.</p>
+                    <div class="hero-buttons">
+                        <a href="#challenges" class="btn btn-primary">See How Nova Helps</a>
+                        <a href="#contact" class="btn btn-secondary">Schedule Demo</a>
+                    </div>
+                </div>
+                <div>
+                    <img src="assets/pharma rep.png" alt="Nova for Pharma Reps - AI Companion" style="max-width: 100%; height: auto;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Challenges & Solutions Section -->
+    <section id="challenges" class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2>Addressing Your Biggest Challenges</h2>
+                <p>Pharmaceutical sales representatives face unique challenges in today's competitive, regulated, and rapidly evolving environment. Nova's AI companion transforms these challenges into competitive advantages.</p>
+            </div>
+            
+            <div class="challenges-grid">
+                <!-- Challenge 1: HCP Access -->
+                <div class="challenge-card">
+                    <div class="challenge-icon">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <h3>Limited HCP Access & Time</h3>
+                    <div class="challenge-problem">
+                        <h4>The Challenge:</h4>
+                        <p>HCPs are busier than ever with strict "no-see" policies and limited access times. Getting meaningful face time is increasingly difficult.</p>
+                    </div>
+                    <div class="challenge-solution">
+                        <h4>Nova's Solution:</h4>
+                        <ul>
+                            <li><strong>Intelligent Scheduling & Routing:</strong> AI analyzes traffic patterns, HCP availability, and visit success rates to optimize your daily routes</li>
+                            <li><strong>Pre-call Planning:</strong> Instantly access HCP profiles, prescribing habits, and interaction history for personalized approaches</li>
+                            <li><strong>Optimized Digital Engagement:</strong> AI suggests the most effective digital channels when in-person isn't possible</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Challenge 2: Information Overload -->
+                <div class="challenge-card">
+                    <div class="challenge-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Information Overload & Product Knowledge</h3>
+                    <div class="challenge-problem">
+                        <h4>The Challenge:</h4>
+                        <p>Managing vast amounts of complex scientific data across multiple products, with constantly updating clinical information and competitive landscape.</p>
+                    </div>
+                    <div class="challenge-solution">
+                        <h4>Nova's Solution:</h4>
+                        <ul>
+                            <li><strong>Instant MLR-Approved Knowledge:</strong> AI-powered assistant provides compliant answers to complex questions during HCP interactions</li>
+                            <li><strong>Personalized Learning:</strong> AI identifies knowledge gaps and recommends targeted micro-learnings</li>
+                            <li><strong>Competitive Intelligence:</strong> Real-time insights on competitor data and market positioning</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Challenge 3: Administrative Burden -->
+                <div class="challenge-card">
+                    <div class="challenge-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h3>Administrative Burden & Time Management</h3>
+                    <div class="challenge-problem">
+                        <h4>The Challenge:</h4>
+                        <p>Significant time spent on non-selling activities like CRM data entry, compliance documentation, and call preparation reduces actual selling time.</p>
+                    </div>
+                    <div class="challenge-solution">
+                        <h4>Nova's Solution:</h4>
+                        <ul>
+                            <li><strong>Automated CRM Updates:</strong> Voice-to-text and smart transcription automatically capture meeting details</li>
+                            <li><strong>Intelligent Reporting:</strong> AI generates activity summaries and follow-up actions</li>
+                            <li><strong>Smart Task Management:</strong> Prioritized task lists and "next best action" recommendations</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Challenge 4: Message Personalization -->
+                <div class="challenge-card">
+                    <div class="challenge-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Message Personalization & Value Delivery</h3>
+                    <div class="challenge-problem">
+                        <h4>The Challenge:</h4>
+                        <p>HCPs expect relevant, personalized information addressing their specific patient populations and practice needs. Generic pitches are ineffective.</p>
+                    </div>
+                    <div class="challenge-solution">
+                        <h4>Nova's Solution:</h4>
+                        <ul>
+                            <li><strong>Content Recommendation Engine:</strong> AI suggests the most relevant MLR-approved content based on HCP profiles</li>
+                            <li><strong>Dynamic Presentation Generation:</strong> Quickly assemble customized presentations with approved content</li>
+                            <li><strong>Adaptive Messaging:</strong> Suggested talking points tailored to specific HCP personas</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Challenge 5: Performance Optimization -->
+                <div class="challenge-card">
+                    <div class="challenge-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Performance Optimization & Coaching</h3>
+                    <div class="challenge-problem">
+                        <h4>The Challenge:</h4>
+                        <p>Limited access to continuous feedback and coaching to improve sales techniques, objection handling, and product messaging.</p>
+                    </div>
+                    <div class="challenge-solution">
+                        <h4>Nova's Solution:</h4>
+                        <ul>
+                            <li><strong>AI-Driven Coaching:</strong> Virtual sales call simulations with real-time feedback on communication and objection handling</li>
+                            <li><strong>Performance Analytics:</strong> Analysis of interaction data to identify improvement areas</li>
+                            <li><strong>Predictive Sales Forecasting:</strong> AI identifies highest-potential HCPs and accounts for prioritized efforts</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Challenge 6: Compliance -->
+                <div class="challenge-card">
+                    <div class="challenge-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Compliance & Ethical Boundaries</h3>
+                    <div class="challenge-problem">
+                        <h4>The Challenge:</h4>
+                        <p>Heavy regulatory requirements demand that all communications remain compliant, avoiding off-label promotion or inappropriate incentives.</p>
+                    </div>
+                    <div class="challenge-solution">
+                        <h4>Nova's Solution:</h4>
+                        <ul>
+                            <li><strong>Real-time Compliance Checks:</strong> AI flags potential compliance risks during conversations</li>
+                            <li><strong>Approved Messaging Access:</strong> Ensures only pre-approved, vetted content is utilized</li>
+                            <li><strong>Audit Trail Management:</strong> Comprehensive documentation for regulatory compliance</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Features Section -->
+    <section class="features-section section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2>Transform Your Sales Performance</h2>
+                <p>Move beyond being a "detailer" to becoming a highly effective, knowledgeable, and compliant scientific partner to HCPs.</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>AI-Powered Insights</h3>
+                    <p>Real-time intelligence during HCP interactions with instant access to clinical data, competitive insights, and personalized talking points.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-route"></i>
+                    </div>
+                    <h3>Smart Territory Management</h3>
+                    <p>Optimize your daily routes and maximize HCP interactions with AI-driven scheduling and territory analytics.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Continuous Learning</h3>
+                    <p>Personalized training modules and knowledge updates keep you at the forefront of product knowledge and sales techniques.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-microphone"></i>
+                    </div>
+                    <h3>Voice-Activated CRM</h3>
+                    <p>Hands-free data capture and CRM updates let you focus on building relationships instead of administrative tasks.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3>Compliance Assurance</h3>
+                    <p>Built-in compliance monitoring ensures all communications meet regulatory standards with real-time alerts and approved content.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-analytics"></i>
+                    </div>
+                    <h3>Performance Analytics</h3>
+                    <p>Track your success metrics, identify top-performing strategies, and receive coaching recommendations for continuous improvement.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ROI Section -->
+
+
+    <!-- CTA Section -->
+    <section class="cta-section section-padding">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Revolutionize Your Pharmaceutical Sales?</h2>
+                <p>Join the next generation of pharmaceutical sales representatives who leverage AI to build stronger HCP relationships, ensure compliance, and drive better patient outcomes.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get Started with Nova for Pharma Reps</h2>
+                <p>Ready to transform your pharmaceutical sales approach? Let's discuss how Nova can address your specific challenges.</p>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Why Choose Nova?</h3>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Designed specifically for pharmaceutical sales</li>
+                        <li><i class="fas fa-check"></i> Built-in compliance and regulatory features</li>
+                        <li><i class="fas fa-check"></i> Seamless integration with existing CRM systems</li>
+                        <li><i class="fas fa-check"></i> Proven ROI in sales performance improvement</li>
+                        <li><i class="fas fa-check"></i> 24/7 AI-powered support and guidance</li>
+                    </ul><br><br>
+                </div>
+                
+                <div class="contact-form">
+                    <form id="pharmaContactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Full Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Work Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="company" name="company" placeholder="Pharmaceutical Company" required>
+                        </div>
+                        <div class="form-group">
+                            <select id="territory" name="territory" required>
+                                <option value="">Select Territory Size</option>
+                                <option value="small">Small (1-50 HCPs)</option>
+                                <option value="medium">Medium (51-150 HCPs)</option>
+                                <option value="large">Large (150+ HCPs)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="challenges" name="challenges" placeholder="What are your biggest pharmaceutical sales challenges?" rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">Request Demo & Pricing</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Ask-Nova</h4>
+                    <p style="color: var(--medium-gray);">Empowering healthcare sales professionals with AI-driven intelligence and automation.</p>
+                    <div style="margin-top: 1rem;">
+                        <i class="fas fa-shield-alt" style="color: var(--accent-green); margin-right: 0.5rem;"></i>
+                        <span style="font-size: 0.9rem;">HIPAA Compliant & SOC 2 Certified</span>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Solutions</h4>
+                    <ul>
+                        <li><a>AI Agentic Framework</a></li>
+                        <li><a>Customer Intelligence</a></li>
+                        <li><a>Call Coaching</a></li>
+                        <li><a>Market Analytics</a></li>
+                        <li><a>Integrations</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Industries</h4>
+                    <ul>
+                        <li><a>Pharmaceutical</a></li>
+                        <li><a>Medical Devices</a></li>
+                        <li><a>Biotechnology</a></li>
+                        <li><a>Animal Health</a></li>
+                        <li><a>Healthcare Technology</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a>NOVA AI INC.</a></li>
+                        <li><a>100-7405 rte Transcanadienne</a></li>
+                        <li><a>Montréal (Québec) H4T1Z2</a></li>
+                        <li><a>Canada</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Nova AI Inc. All rights reserved. Ask-Nova is a trademark of Nova AI Inc.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html> 

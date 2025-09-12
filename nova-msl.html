@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nova for MSL - AI-powered companion for Medical Science Liaisons. Transform KOL engagement, streamline scientific exchange, and enhance compliance in pharmaceutical medical affairs.">
+    <meta name="keywords" content="Medical Science Liaison, MSL, AI companion, KOL engagement, scientific exchange, compliance, medical affairs, pharmaceutical">
+    <title>Nova for MSL | AI Companion for Medical Science Liaisons</title>
+    
+    <!-- Preconnect to font services -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- EmailJS for client-side email sending -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BBBR4LG0TZ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-BBBR4LG0TZ');
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <nav class="container nav-container">
+            <a href="index.html" class="logo">Ask-Nova <img src="assets/nova-icon.png" alt="Nova" style="width: 24px; height: 24px; margin-left: 0.5rem; vertical-align: middle;"></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li class="nav-item">
+                    <a href="solutions.html">Solutions</a>
+                    <div class="dropdown-menu">
+                        <a href="nova-pharma-reps.html">&nbsp;&nbsp;Nova for Pharma Reps</a>
+                        <a href="nova-msl.html">&nbsp;&nbsp;Nova for MSL</a>
+                        <a href="nova-kam.html">&nbsp;&nbsp;Nova for KAM</a>
+                        <a href="nova-med-devices.html">&nbsp;&nbsp;Nova for Med Devices</a>
+                        <a href="nova-consumer-health.html">&nbsp;&nbsp;Nova for Consumer Health</a>
+                        <a href="nova-animal-health.html">&nbsp;&nbsp;Nova for Animal Health</a>
+                    </div>
+                </li>
+                <li><a href="integrations.html">Integrations</a></li>
+                <li><a href="#contact" class="btn btn-primary">Request Demo</a></li>
+            </ul>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Nova for Medical Science Liaisons</h1>
+                    <p>Elevate your scientific exchange with AI-powered intelligence. Bridge the gap between cutting-edge research and key opinion leaders with unprecedented efficiency and compliance.</p>
+                    <div class="hero-buttons">
+                        <a href="#challenges" class="btn btn-primary">Explore MSL Solutions</a>
+                        <a href="#contact" class="btn btn-secondary">Schedule Demo</a>
+                    </div>
+                </div>
+                <div>
+                    <img src="assets/msl.png" alt="Nova for MSL - AI Scientific Companion" style="max-width: 80%; height: auto;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Challenges & Solutions Section -->
+    <section id="challenges" class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2>Transforming MSL Excellence</h2>
+                <p>Medical Science Liaisons face unique challenges as scientific experts bridging pharmaceutical companies and Key Opinion Leaders. Nova's AI companion transforms these complex challenges into competitive advantages.</p>
+            </div>
+            
+            <div class="challenges-grid">
+                <!-- Challenge 1: Information Overload -->
+                <div class="challenge-card">
+                    <div class="challenge-icon">
+                        <i class="fas fa-microscope"></i>
+                    </div>
+                    <h3>Information Overload & Scientific Updates</h3>
+                    <div class="challenge-problem">
+                        <h4>The Challenge:</h4>
+                        <p>MSLs must stay constantly updated on vast volumes of clinical data, research findings, pipeline developments, and therapeutic guidelines. The daily scientific literature is overwhelming and impossible to manually track.</p>
+                    </div>
+                    <div class="challenge-solution">
+                        <h4>Nova's Solution:</h4>
+                        <ul>
+                            <li><strong>Automated Literature Monitoring:</strong> AI continuously scans thousands of journals, abstracts, and clinical databases with intelligent summarization</li>
+                            <li><strong>Personalized Scientific Feeds:</strong> Customized content delivery based on therapeutic areas and KOL interests</li>
+                            <li><strong>On-Demand Information Retrieval:</strong> Instant access to specific data points, study results, and drug interactions during KOL discussions</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Challenge 2: KOL Identification -->
+                <div class="challenge-card">
+                    <div class="challenge-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3>KOL Identification & Prioritization</h3>
+                    <div class="challenge-problem">
+                        <h4>The Challenge:</h4>
+                        <p>Identifying the most influential KOLs, understanding their research interests, affiliations, and communication preferences, then prioritizing engagement is complex and time-consuming.</p>
+                    </div>
+                    <div class="challenge-solution">
+                        <h4>Nova's Solution:</h4>
+                        <ul>
+                            <li><strong>AI-Powered KOL Profiling:</strong> Comprehensive analysis of publications, speaking engagements, clinical trials, and influence networks</li>
+                            <li><strong>Predictive Engagement Analytics:</strong> Optimal timing, communication channels, and conversation starters based on KOL activities</li>
+                            <li><strong>Sentiment Analysis:</strong> Real-time assessment of KOL attitudes towards therapies and scientific concepts</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Challenge 3: Impact Measurement -->
+                <div class="challenge-card">
+                    <div class="challenge-icon">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <h3>Impact Demonstration & Value Measurement</h3>
+                    <div class="challenge-problem">
+                        <h4>The Challenge:</h4>
+                        <p>The qualitative nature of MSL work makes it difficult to quantify impact and demonstrate ROI. Traditional metrics often fail to capture the value of scientific exchange and relationship building.</p>
+                    </div>
+                    <div class="challenge-solution">
+                        <h4>Nova's Solution:</h4>
+                        <ul>
+                            <li><strong>Automated Insight Capture:</strong> NLP extracts and categorizes key insights, unmet needs, and questions from KOL discussions</li>
+                            <li><strong>Strategic Impact Tracking:</strong> Links gathered insights to medical strategy, research initiatives, and educational programs</li>
+                            <li><strong>Relationship Quality Analytics:</strong> Communication patterns and engagement depth analysis for qualitative assessment support</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Challenge 4: Compliance -->
+                <div class="challenge-card">
+                    <div class="challenge-icon">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h3>Compliance & Regulatory Adherence</h3>
+                    <div class="challenge-problem">
+                        <h4>The Challenge:</h4>
+                        <p>MSLs operate within strict regulatory frameworks with rules around scientific exchange, off-label discussions, and data privacy (HIPAA, Sunshine Act). Maintaining compliance requires constant vigilance.</p>
+                    </div>
+                    <div class="challenge-solution">
+                        <h4>Nova's Solution:</h4>
+                        <ul>
+                            <li><strong>Real-time Compliance Monitoring:</strong> Built-in checks and alerts for potential off-label discussions or restricted topics</li>
+                            <li><strong>Automated Documentation Support:</strong> Streamlined compliance reporting with pre-populated fields and required information capture</li>
+                            <li><strong>Approved Resource Access:</strong> Instant access to only compliant, approved medical information and scientific resources</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Challenge 5: Administrative Burden -->
+                <div class="challenge-card">
+                    <div class="challenge-icon">
+                        <i class="fas fa-clipboard-list"></i>
+                    </div>
+                    <h3>Administrative Burden & Workflow Efficiency</h3>
+                    <div class="challenge-problem">
+                        <h4>The Challenge:</h4>
+                        <p>Significant time spent on scheduling, travel planning, expense reporting, and manual data entry reduces time available for core scientific engagement activities.</p>
+                    </div>
+                    <div class="challenge-solution">
+                        <h4>Nova's Solution:</h4>
+                        <ul>
+                            <li><strong>Intelligent Scheduling & Travel Optimization:</strong> AI-optimized routes, KOL availability analysis, and automated scheduling processes</li>
+                            <li><strong>Automated Reporting & Data Entry:</strong> CRM integration with pre-filled reports and extracted meeting insights</li>
+                            <li><strong>Smart Follow-up Management:</strong> Intelligent reminders for literature sharing, meeting follow-ups, and engagement scheduling</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Challenge 6: Personalization -->
+                <div class="challenge-card">
+                    <div class="challenge-icon">
+                        <i class="fas fa-user-cog"></i>
+                    </div>
+                    <h3>Scientific Exchange Personalization</h3>
+                    <div class="challenge-problem">
+                        <h4>The Challenge:</h4>
+                        <p>Delivering highly relevant and engaging scientific information requires tailoring content to each KOL's specific interests, research focus, and learning preferences.</p>
+                    </div>
+                    <div class="challenge-solution">
+                        <h4>Nova's Solution:</h4>
+                        <ul>
+                            <li><strong>Intelligent Content Curation:</strong> AI recommends specific articles, presentations, and data visualizations based on KOL profiles and past interactions</li>
+                            <li><strong>Dynamic Scientific Presentations:</strong> Personalized slide decks assembled from approved content based on discussion context</li>
+                            <li><strong>Adaptive Communication Strategies:</strong> Tailored messaging approaches based on KOL communication preferences and engagement history</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Features Section -->
+    <section class="features-section section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2>Elevate Your Scientific Leadership</h2>
+                <p>Transform from scientific support to strategic scientific partnership with KOLs through AI-enhanced capabilities.</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Scientific Intelligence Engine</h3>
+                    <p>Real-time access to the latest research, clinical data, and therapeutic insights with intelligent analysis and summarization.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>KOL Relationship Optimization</h3>
+                    <p>AI-powered profiling and engagement strategies to build deeper, more productive relationships with key opinion leaders.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-presentation"></i>
+                    </div>
+                    <h3>Dynamic Content Generation</h3>
+                    <p>Personalized scientific presentations and materials tailored to individual KOL interests and research focus areas.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-virus"></i>
+                    </div>
+                    <h3>Compliance Intelligence</h3>
+                    <p>Built-in regulatory compliance monitoring ensures all scientific exchanges meet industry standards and legal requirements.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>Literature Surveillance</h3>
+                    <p>Automated monitoring of scientific publications, conference proceedings, and clinical trial updates relevant to your therapeutic areas.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-analytics"></i>
+                    </div>
+                    <h3>Impact Analytics</h3>
+                    <p>Measure and demonstrate the value of your scientific exchanges with quantifiable insights and strategic impact tracking.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- CTA Section -->
+    <section class="cta-section section-padding">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Transform Your MSL Impact?</h2>
+                <p>Join the next generation of Medical Science Liaisons who leverage AI to drive meaningful scientific exchange, enhance KOL relationships, and advance medical knowledge.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get Started with Nova for MSL</h2>
+                <p>Ready to enhance your scientific leadership? Let's discuss how Nova can elevate your KOL engagement and scientific impact.</p>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Why MSLs Choose Nova?</h3>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Purpose-built for medical affairs and scientific exchange</li>
+                        <li><i class="fas fa-check"></i> Advanced compliance and regulatory safeguards</li>
+                        <li><i class="fas fa-check"></i> Seamless integration with medical affairs workflows</li>
+                        <li><i class="fas fa-check"></i> Proven enhancement of scientific impact and KOL relationships</li>
+                        <li><i class="fas fa-check"></i> 24/7 AI-powered scientific support and literature monitoring</li>
+                    </ul><br><br>   
+                </div>
+                
+                <div class="contact-form">
+                    <form id="mslContactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Full Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Work Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="company" name="company" placeholder="Pharmaceutical/Biotech Company" required>
+                        </div>
+                        <div class="form-group">
+                            <select id="therapeuticArea" name="therapeuticArea" required>
+                                <option value="">Select Primary Therapeutic Area</option>
+                                <option value="oncology">Oncology</option>
+                                <option value="cardiology">Cardiology</option>
+                                <option value="neurology">Neurology</option>
+                                <option value="immunology">Immunology</option>
+                                <option value="infectious-disease">Infectious Disease</option>
+                                <option value="rare-disease">Rare Disease</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="challenges" name="challenges" placeholder="What are your biggest MSL challenges or scientific exchange needs?" rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">Request MSL Demo & Pricing</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Ask-Nova</h4>
+                    <p style="color: var(--medium-gray);">Empowering healthcare sales professionals with AI-driven intelligence and automation.</p>
+                    <div style="margin-top: 1rem;">
+                        <i class="fas fa-shield-alt" style="color: var(--accent-green); margin-right: 0.5rem;"></i>
+                        <span style="font-size: 0.9rem;">HIPAA Compliant & SOC 2 Certified</span>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Solutions</h4>
+                    <ul>
+                        <li><a>AI Agentic Framework</a></li>
+                        <li><a>Customer Intelligence</a></li>
+                        <li><a>Call Coaching</a></li>
+                        <li><a>Market Analytics</a></li>
+                        <li><a>Integrations</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Industries</h4>
+                    <ul>
+                        <li><a>Pharmaceutical</a></li>
+                        <li><a>Medical Devices</a></li>
+                        <li><a>Biotechnology</a></li>
+                        <li><a>Animal Health</a></li>
+                        <li><a>Healthcare Technology</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a>NOVA AI INC.</a></li>
+                        <li><a>100-7405 rte Transcanadienne</a></li>
+                        <li><a>Montréal (Québec) H4T1Z2</a></li>
+                        <li><a>Canada</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Nova AI Inc. All rights reserved. Ask-Nova is a trademark of Nova AI Inc.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html> 

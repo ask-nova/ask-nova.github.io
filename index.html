@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ask-Nova - AI Agentic framework for pharmaceutical and healthcare sales professionals. Empower your sales team with cutting-edge AI technology.">
+    <meta name="keywords" content="AI, pharmaceutical sales, healthcare technology, medical device sales, sales automation, Nova AI Inc., ask-nova">
+    <title>Ask-Nova | AI-Powered Healthcare Sales Solutions by Nova AI Inc.</title>
+    
+    <!-- Preconnect to font services -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- EmailJS for client-side email sending -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Additional Home Page Styles -->
+    <style>
+        /* Ensure consistent styling across all pages */
+    </style>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏥</text></svg>">
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BBBR4LG0TZ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-BBBR4LG0TZ');
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">Ask-Nova <img src="assets/nova-icon.png" style="width: 24px; height: 24px; margin-left: 0.5rem; vertical-align: middle;"></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li class="nav-item">
+                    <a href="solutions.html">Solutions</a>
+                    <div class="dropdown-menu">
+                        <a href="nova-pharma-reps.html">&nbsp;&nbsp;Nova for Pharma Reps</a>
+                        <a href="nova-msl.html">&nbsp;&nbsp;Nova for MSL</a>
+                        <a href="nova-kam.html">&nbsp;&nbsp;Nova for KAM</a>
+                        <a href="nova-med-devices.html">&nbsp;&nbsp;Nova for Med Devices</a>
+                        <a href="nova-consumer-health.html">&nbsp;&nbsp;Nova for Consumer Health</a>
+                        <a href="nova-animal-health.html">&nbsp;&nbsp;Nova for Animal Health</a>
+                    </div>
+                </li>
+                <li><a href="integrations.html">Integrations</a></li>
+                <li><a href="#contact" class="btn btn-primary">Request Demo</a></li>
+            </ul>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Revolutionize Healthcare Sales with AI-Powered Intelligence</h1>
+                    <p class="subtitle">Ask-Nova empowers pharmaceutical and healthcare sales professionals with cutting-edge AI Agentic technology, delivering unprecedented insights, automation, and competitive advantage.</p>
+                    <div class="hero-actions">
+                        <a href="#features" class="btn btn-secondary">Explore Features</a>
+                    </div>
+                    <div class="trust-indicators" style="margin-top: 2rem;">
+                        <p style="font-size: 0.9rem; color: var(--medium-gray); margin-bottom: 1rem;">Trusted by leading healthcare organizations</p>
+                    </div>
+                </div>
+                <div>
+                    <img src="assets/nova-screenshot-1.png" alt="Nova Mobile App - Personal Sales Assistant" style="max-width:60%; height: auto; ">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Overview -->
+    <section id="features" class="features-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Intelligent Solutions for Healthcare Sales Excellence</h2>
+                <p>Leverage advanced AI technology to transform your sales process, enhance customer relationships, and drive unprecedented results across pharmaceutical, medical device, and healthcare sectors.</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>AI-Powered Intelligence</h3>
+                    <p>Advanced machine learning algorithms provide deep customer insights, predictive analytics, and personalized recommendations to optimize every interaction.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Customer Intelligence</h3>
+                    <p>Comprehensive customer profiles with interaction history, preferences, and behavioral analytics to enhance relationship building and sales effectiveness.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-microphone"></i>
+                    </div>
+                    <h3>AI Call Coaching</h3>
+                    <p>Real-time guidance and post-call analysis with automated summaries, key insights, and performance recommendations to improve sales outcomes.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Market Analytics</h3>
+                    <p>Access real-time market data, competitive intelligence, and industry trends to stay ahead of the competition and identify new opportunities.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Data Integration</h3>
+                    <p>Seamless connectivity with CRM systems, medical databases, and internal data sources for a unified view of your sales ecosystem.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>Automated Reporting</h3>
+                    <p>Intelligent listening capabilities automatically generate detailed reports, eliminating manual data entry and ensuring accurate documentation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- Statistics Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 style="color: white;">Our Results Objectives for your Organization</h2>
+                <p style="color: rgba(255, 255, 255, 0.9);">Ask-Nova delivers measurable improvements in sales performance, efficiency, and customer satisfaction.</p>
+            </div>
+            
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>25%</h3>
+                    <p>Increase in Sales Productivity</p>
+                </div>
+                <div class="stat-item">
+                    <h3>15%</h3>
+                    <p>Reduction in Admin Time</p>
+                </div>
+                <div class="stat-item">
+                    <h3>30%</h3>
+                    <p>Improvement in Customer Engagement</p>
+                </div>
+                <div class="stat-item">
+                    <h3>60%</h3>
+                    <p>User Satisfaction Rate</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="demo" class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Transform Your Healthcare Sales?</h2>
+                <p>Are you ready to experience the power of AI-driven sales intelligence and see the difference Ask-Nova can make.</p>
+                <div style="margin-top: 2rem;">
+                    <a href="#contact" class="btn btn-accent">Request Demo</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact" style="background: var(--white); padding: 4rem 0;">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get Started with Ask-Nova</h2>
+                <p>Contact our team to schedule a personalized demo and see how Ask-Nova can transform your healthcare sales operations.</p>
+            </div>
+            
+            <div style="max-width: 600px; margin: 0 auto;">
+                <form style="background: var(--light-gray); padding: 3rem; border-radius: 15px;">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem;">
+                        <div class="form-group">
+                            <label for="firstName">First Name *</label>
+                            <input type="text" id="firstName" name="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name *</label>
+                            <input type="text" id="lastName" name="lastName" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="company">Company</label>
+                        <input type="text" id="company" name="company">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="role">Your Role</label>
+                        <select id="role" name="role">
+                            <option value="">Select your role</option>
+                            <option value="pharma-rep">Pharmaceutical Representative</option>
+                            <option value="medical-liaison">Medical Liaison</option>
+                            <option value="device-rep">Medical Device Representative</option>
+                            <option value="otc-rep">OTC Representative</option>
+                            <option value="animal-health">Animal Health Representative</option>
+                            <option value="sales-manager">Sales Manager</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="interest">What interests you most about Ask-Nova?</label>
+                        <textarea id="interest" name="interest" rows="4" placeholder="Tell us about your current challenges and how we can help..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Request Demo</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Ask-Nova</h4>
+                    <p style="color: var(--medium-gray);">Empowering healthcare sales professionals with AI-driven intelligence and automation.</p>
+                    <div style="margin-top: 1rem;">
+                        <i class="fas fa-shield-alt" style="color: var(--accent-green); margin-right: 0.5rem;"></i>
+                        <span style="font-size: 0.9rem;">HIPAA Compliant & SOC 2 Certified</span>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Solutions</h4>
+                    <ul>
+                        <li><a>AI Agentic Framework</a></li>
+                        <li><a>Customer Intelligence</a></li>
+                        <li><a>Call Coaching</a></li>
+                        <li><a>Market Analytics</a></li>
+                        <li><a>Integrations</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Industries</h4>
+                    <ul>
+                        <li><a>Pharmaceutical</a></li>
+                        <li><a>Medical Devices</a></li>
+                        <li><a>Biotechnology</a></li>
+                        <li><a>Animal Health</a></li>
+                        <li><a>Healthcare Technology</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a>NOVA AI INC.</a></li>
+                        <li><a>100-7405 rte Transcanadienne</a></li>
+                        <li><a>Montréal (Québec) H4T1Z2</a></li>
+                        <li><a>Canada</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Nova AI Inc. All rights reserved. Ask-Nova is a trademark of Nova AI Inc.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html> 
