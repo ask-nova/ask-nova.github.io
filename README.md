@@ -1,6 +1,6 @@
 # Ask-Nova Website
 
-A professional, responsive website for Ask-Nova, a cutting-edge AI Agentic framework designed for pharmaceutical and healthcare sales professionals by Nova Technology Inc.
+A professional, responsive website for Ask-Nova, a cutting-edge AI Agentic framework designed for pharmaceutical and healthcare sales professionals by Nova AI Inc.
 
 ## 🏥 About Ask-Nova
 
@@ -247,4 +247,5 @@ For questions or support regarding this website:
 
 ---
 
-**Nova Technology Inc.** - Empowering healthcare sales professionals with AI-driven intelligence and automation. 
+
+**Nova AI Inc.** - Empowering healthcare sales professionals with AI-driven intelligence and automation. 
