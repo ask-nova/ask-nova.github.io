@@ -150,7 +150,7 @@ function handleFormSubmission(form) {
     // Prepare email data
     const emailData = prepareEmailData(formData, formType);
     
-    // Send email using EmailJS
+    // Send email using Azure Logic App
     sendFormEmail(emailData)
         .then(() => {
             showNotification('Thank you! We will get back to you within 24 hours.', 'success');
@@ -192,9 +192,17 @@ function determineFormType(form) {
         if (formId.includes('animalHealth')) return 'animal_health';
     }
     
+    // Check if form is inside a contact section
     if (form.closest('#contact')) return 'contact';
+    
+    // Check for specific form elements
     if (form.querySelector('#roiCalculator')) return 'roi_calculator';
-    if (form.querySelector('#role')) return 'demo_request';
+    
+    // Homepage form has firstName/lastName fields and role field
+    if (form.querySelector('#firstName') && form.querySelector('#lastName') && form.querySelector('#role')) {
+        return 'contact';
+    }
+    
     return 'general';
 }
 
@@ -337,6 +345,99 @@ function prepareEmailData(formData, formType) {
         data[key] = value;
     }
     
+    // Map form-specific fields to common email template fields
+    if (formType === 'pharma_reps') {
+        // Pharma reps form uses 'name' instead of 'firstName'/'lastName'
+        if (data.name && !data.firstName) {
+            const nameParts = data.name.split(' ');
+            data.firstName = nameParts[0] || '';
+            data.lastName = nameParts.slice(1).join(' ') || '';
+        }
+        // Map 'challenges' to 'interest' for email template
+        if (data.challenges && !data.interest) {
+            data.interest = data.challenges;
+        }
+        // Add role for pharma reps
+        if (!data.role) {
+            data.role = 'Pharmaceutical Sales Representative';
+        }
+    } else if (formType === 'msl') {
+        // MSL form uses 'name' instead of 'firstName'/'lastName'
+        if (data.name && !data.firstName) {
+            const nameParts = data.name.split(' ');
+            data.firstName = nameParts[0] || '';
+            data.lastName = nameParts.slice(1).join(' ') || '';
+        }
+        // Map 'challenges' to 'interest' for email template
+        if (data.challenges && !data.interest) {
+            data.interest = data.challenges;
+        }
+        // Add role for MSL
+        if (!data.role) {
+            data.role = 'Medical Science Liaison';
+        }
+    } else if (formType === 'kam') {
+        // KAM form uses 'name' instead of 'firstName'/'lastName'
+        if (data.name && !data.firstName) {
+            const nameParts = data.name.split(' ');
+            data.firstName = nameParts[0] || '';
+            data.lastName = nameParts.slice(1).join(' ') || '';
+        }
+        // Map 'challenges' to 'interest' for email template
+        if (data.challenges && !data.interest) {
+            data.interest = data.challenges;
+        }
+        // Add role for KAM
+        if (!data.role) {
+            data.role = 'Key Account Manager';
+        }
+    } else if (formType === 'med_devices') {
+        // Medical devices form uses 'name' instead of 'firstName'/'lastName'
+        if (data.name && !data.firstName) {
+            const nameParts = data.name.split(' ');
+            data.firstName = nameParts[0] || '';
+            data.lastName = nameParts.slice(1).join(' ') || '';
+        }
+        // Map 'challenges' to 'interest' for email template
+        if (data.challenges && !data.interest) {
+            data.interest = data.challenges;
+        }
+        // Add role for medical devices
+        if (!data.role) {
+            data.role = 'Medical Device Representative';
+        }
+    } else if (formType === 'consumer_health') {
+        // Consumer health form uses 'name' instead of 'firstName'/'lastName'
+        if (data.name && !data.firstName) {
+            const nameParts = data.name.split(' ');
+            data.firstName = nameParts[0] || '';
+            data.lastName = nameParts.slice(1).join(' ') || '';
+        }
+        // Map 'challenges' to 'interest' for email template
+        if (data.challenges && !data.interest) {
+            data.interest = data.challenges;
+        }
+        // Add role for consumer health
+        if (!data.role) {
+            data.role = 'Consumer Health Representative';
+        }
+    } else if (formType === 'animal_health') {
+        // Animal health form uses 'name' instead of 'firstName'/'lastName'
+        if (data.name && !data.firstName) {
+            const nameParts = data.name.split(' ');
+            data.firstName = nameParts[0] || '';
+            data.lastName = nameParts.slice(1).join(' ') || '';
+        }
+        // Map 'challenges' to 'interest' for email template
+        if (data.challenges && !data.interest) {
+            data.interest = data.challenges;
+        }
+        // Add role for animal health
+        if (!data.role) {
+            data.role = 'Animal Health Representative';
+        }
+    }
+    
     return data;
 }
 
@@ -350,6 +451,8 @@ const EMAIL_CONFIG = {
 
 function sendFormEmail(emailData) {
     // Send email using Azure Logic App
+    console.log('Sending email data to Azure:', emailData);
+    
     return fetch(EMAIL_CONFIG.AZURE_ENDPOINT, {
         method: 'POST',
         headers: {
@@ -358,10 +461,17 @@ function sendFormEmail(emailData) {
         body: JSON.stringify(emailData)
     })
     .then(response => {
+        console.log('Azure response status:', response.status);
         if (response.ok) {
-            return { status: 200, text: 'Email sent successfully' };
+            return response.json().then(data => {
+                console.log('Azure response data:', data);
+                return { status: 200, text: 'Email sent successfully' };
+            });
         } else {
-            throw new Error(`HTTP error! status: ${response.status}`);
+            return response.text().then(text => {
+                console.error('Azure error response:', text);
+                throw new Error(`HTTP error! status: ${response.status}, message: ${text}`);
+            });
         }
     })
     .catch(error => {
