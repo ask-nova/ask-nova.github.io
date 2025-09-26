@@ -340,34 +340,35 @@ function prepareEmailData(formData, formType) {
     return data;
 }
 
-function sendFormEmail(emailData) {
-    // EmailJS configuration
-    const SERVICE_ID = 'service_ask_nova'; // You'll need to replace with your EmailJS service ID
-    const TEMPLATE_ID = 'template_demo_request'; // You'll need to replace with your EmailJS template ID  
-    const PUBLIC_KEY = 'YOUR_EMAILJS_PUBLIC_KEY'; // You'll need to replace with your EmailJS public key
-    
-    // Check if EmailJS is loaded
-    if (typeof emailjs === 'undefined') {
-        console.warn('EmailJS not loaded. Using fallback email method.');
-        return sendEmailFallback(emailData);
+// CENTRALIZED EMAIL CONFIGURATION
+const EMAIL_CONFIG = {
+    AZURE_ENDPOINT: 'https://prod-00.northcentralus.logic.azure.com:443/workflows/3d664181d2b548df9e1795e0136e2310/triggers/When_an_HTTP_request_is_received/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2FWhen_an_HTTP_request_is_received%2Frun&sv=1.0&sig=1Cy8mliRVbaGOoE3c1DK0PEv3bOYKtHrXnq5lM73NoY',
+    RECIPIENTS: {
+        primary: 'ludovic.petit@exeevo.com'
     }
-    
-    // Send email using EmailJS
-    return emailjs.send(SERVICE_ID, TEMPLATE_ID, {
-        to_email: 'ludovic.petit@exeevo.com',
-        to_email_2: 'paven.rai@exeevo.com',
-        from_name: emailData.firstName + ' ' + (emailData.lastName || ''),
-        from_email: emailData.email,
-        company: emailData.company || 'Not provided',
-        role: emailData.role || 'Not provided',
-        interest: emailData.interest || emailData.message || 'Demo request',
-        phone: emailData.phone || 'Not provided',
-        form_type: emailData.form_type,
-        page_url: emailData.page_url,
-        page_title: emailData.page_title,
-        timestamp: emailData.timestamp,
-        subject: `Nova Demo Request - ${emailData.form_type.toUpperCase()} - ${emailData.firstName || 'New Lead'}`
-    }, PUBLIC_KEY);
+};
+
+function sendFormEmail(emailData) {
+    // Send email using Azure Logic App
+    return fetch(EMAIL_CONFIG.AZURE_ENDPOINT, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(emailData)
+    })
+    .then(response => {
+        if (response.ok) {
+            return { status: 200, text: 'Email sent successfully' };
+        } else {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+    })
+    .catch(error => {
+        console.error('Azure Logic App failed, using fallback:', error);
+        // Fallback to mailto if Azure fails
+        return sendEmailFallback(emailData);
+    });
 }
 
 function sendEmailFallback(emailData) {
@@ -376,7 +377,7 @@ function sendEmailFallback(emailData) {
         try {
             const subject = `Nova Demo Request - ${emailData.form_type.toUpperCase()} - ${emailData.firstName || 'New Lead'}`;
             const body = formatEmailBody(emailData);
-            const mailtoLink = `mailto:ludovic.petit@exeevo.com,paven.rai@exeevo.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            const mailtoLink = `mailto:${EMAIL_CONFIG.RECIPIENTS.primary}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
             
             // Open mailto link
             window.location.href = mailtoLink;
@@ -403,18 +404,28 @@ function formatEmailBody(data) {
         'demo_request': 'Demo Request'
     };
     
+    // Build form-specific information
+    let formSpecificInfo = '';
+    if (data.customerType) formSpecificInfo += `- Customer Type: ${data.customerType}\n`;
+    if (data.pharmacyType) formSpecificInfo += `- Pharmacy Type: ${data.pharmacyType}\n`;
+    if (data.accountType) formSpecificInfo += `- Account Type: ${data.accountType}\n`;
+    if (data.deviceCategory) formSpecificInfo += `- Device Category: ${data.deviceCategory}\n`;
+    if (data.therapeuticArea) formSpecificInfo += `- Therapeutic Area: ${data.therapeuticArea}\n`;
+    if (data.territory) formSpecificInfo += `- Territory: ${data.territory}\n`;
+    
     return `
 New Nova Demo Request - ${formTypeNames[data.form_type] || data.form_type}
 
 Contact Information:
-- Name: ${data.firstName || ''} ${data.lastName || ''}
+- Name: ${data.firstName || data.name || ''} ${data.lastName || ''}
 - Email: ${data.email || 'Not provided'}
 - Company: ${data.company || 'Not provided'}
 - Role: ${data.role || 'Not provided'}
 - Phone: ${data.phone || 'Not provided'}
 
-Message/Interest:
-${data.interest || data.message || 'No additional message provided'}
+${formSpecificInfo ? 'Form-Specific Information:\n' + formSpecificInfo : ''}
+Message/Interest/Challenges:
+${data.interest || data.message || data.challenges || 'No additional message provided'}
 
 Request Details:
 - Form Type: ${formTypeNames[data.form_type] || data.form_type}

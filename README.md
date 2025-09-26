@@ -247,5 +247,4 @@ For questions or support regarding this website:
 
 ---
 
-
-**Nova AI Inc.** - Empowering healthcare sales professionals with AI-driven intelligence and automation. 
+**Nova Technology Inc.** - Empowering healthcare sales professionals with AI-driven intelligence and automation. 
