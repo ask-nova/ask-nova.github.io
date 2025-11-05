@@ -35,7 +35,7 @@
     <!-- Additional Agreement Page Styles -->
     <style>
         .agreement-hero {
-            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+            background: linear-gradient(135deg, var(--primary-purple) 0%, var(--teal-primary) 100%);
             color: white;
             padding: 120px 0 80px;
             text-align: center;
@@ -62,15 +62,15 @@
         }
         
         .agreement-content h2 {
-            color: var(--primary-blue);
+            color: var(--primary-purple);
             font-size: 1.8rem;
             margin: 3rem 0 1.5rem 0;
             padding-bottom: 0.5rem;
-            border-bottom: 2px solid var(--accent-green);
+            border-bottom: 2px solid var(--teal-primary);
         }
         
         .agreement-content h3 {
-            color: var(--secondary-blue);
+            color: var(--secondary-purple);
             font-size: 1.3rem;
             margin: 2rem 0 1rem 0;
         }
@@ -85,13 +85,18 @@
             padding-left: 2rem;
         }
         
+        .agreement-content ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
         .agreement-content li {
             margin-bottom: 0.8rem;
             color: var(--dark-gray);
         }
         
         .agreement-content strong {
-            color: var(--primary-blue);
+            color: var(--primary-purple);
             font-weight: 600;
         }
         
@@ -123,18 +128,30 @@
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            color: var(--primary-blue);
+            color: var(--primary-purple);
             text-decoration: none;
             font-weight: 500;
             padding: 0.75rem 1.5rem;
-            border: 2px solid var(--primary-blue);
+            border: 2px solid var(--primary-purple);
             border-radius: 8px;
             transition: all 0.3s ease;
         }
         
         .back-to-home a:hover {
-            background: var(--primary-blue);
+            background: var(--primary-purple);
             color: white;
+        }
+        
+        .agreement-intro {
+            background: var(--light-gray);
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            border-left: 4px solid var(--primary-purple);
+        }
+        
+        .agreement-intro p {
+            margin-bottom: 1rem;
         }
     </style>
 </head>
@@ -168,14 +185,16 @@
     <!-- Agreement Hero Section -->
     <section class="agreement-hero">
         <div class="container">
-            <h2 style="color: black;">Ask-Nova™ Customer Agreement</h2>
+            <h2 style="color: white;">Ask-Nova™ Customer Agreement</h2>
         </div>
     </section>
 
     <!-- Agreement Content -->
     <section class="agreement-content">
         <div class="container">
-            <p><strong>This Ask-Nova™ Customer Agreement</strong> (the "Agreement") is between Customer and the applicable Ask-Nova™ Reseller ("Reseller") and consists of these General Terms, the applicable Service Level Agreement, and any additional terms presented when an order is placed. This Agreement takes effect when the Customer accepts it, applies to any order under this Agreement, and supersedes any prior agreements for the Ask-Nova™ platform. The individual who accepts the Agreement represents that they are authorized to enter into this Agreement on behalf of Customer. Capitalized terms have the meanings given under "Definitions."</p>
+            <div class="agreement-intro">
+                <p><strong>This Ask-Nova™ Customer Agreement</strong> (the "Agreement") is between Customer and the applicable Ask-Nova™ Reseller ("Reseller") and consists of these General Terms, the applicable Service Level Agreement, and any additional terms presented when an order is placed. This Agreement takes effect when the Customer accepts it, applies to any order under this Agreement, and supersedes any prior agreements for the Ask-Nova™ platform. The individual who accepts the Agreement represents that they are authorized to enter into this Agreement on behalf of Customer. Capitalized terms have the meanings given under "Definitions."</p>
+            </div>
 
             <h2>General Terms</h2>
 

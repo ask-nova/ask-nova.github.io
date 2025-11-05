@@ -33,7 +33,7 @@
     <!-- Additional Agreement Page Styles -->
     <style>
         .agreement-hero {
-            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+            background: linear-gradient(135deg, var(--primary-purple) 0%, var(--teal-primary) 100%);
             color: white;
             padding: 120px 0 80px;
             text-align: center;
@@ -60,15 +60,15 @@
         }
         
         .agreement-content h2 {
-            color: var(--primary-blue);
+            color: var(--primary-purple);
             font-size: 1.8rem;
             margin: 3rem 0 1.5rem 0;
             padding-bottom: 0.5rem;
-            border-bottom: 2px solid var(--accent-green);
+            border-bottom: 2px solid var(--teal-primary);
         }
         
         .agreement-content h3 {
-            color: var(--secondary-blue);
+            color: var(--secondary-purple);
             font-size: 1.3rem;
             margin: 2rem 0 1rem 0;
         }
@@ -83,13 +83,18 @@
             padding-left: 2rem;
         }
         
+        .agreement-content ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
         .agreement-content li {
             margin-bottom: 0.8rem;
             color: var(--dark-gray);
         }
         
         .agreement-content strong {
-            color: var(--primary-blue);
+            color: var(--primary-purple);
             font-weight: 600;
         }
         
@@ -121,17 +126,17 @@
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            color: var(--primary-blue);
+            color: var(--primary-purple);
             text-decoration: none;
             font-weight: 500;
             padding: 0.75rem 1.5rem;
-            border: 2px solid var(--primary-blue);
+            border: 2px solid var(--primary-purple);
             border-radius: 8px;
             transition: all 0.3s ease;
         }
         
         .back-to-home a:hover {
-            background: var(--primary-blue);
+            background: var(--primary-purple);
             color: white;
         }
 
@@ -139,12 +144,24 @@
             margin-bottom: 2rem;
             padding: 1rem;
             background: var(--light-gray);
-            border-left: 4px solid var(--accent-green);
+            border-left: 4px solid var(--primary-purple);
             border-radius: 4px;
         }
 
         .effective-date p {
             margin: 0.5rem 0;
+        }
+        
+        .agreement-intro {
+            background: var(--light-gray);
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            border-left: 4px solid var(--primary-purple);
+        }
+        
+        .agreement-intro p {
+            margin-bottom: 1rem;
         }
     </style>
 </head>
@@ -185,16 +202,11 @@
     <!-- Privacy Policy Content -->
     <section class="agreement-content">
         <div class="container">
-            <div class="effective-date">
-                <p><strong>Effective Date:</strong> [Date]</p>
-                <p><strong>Last Updated:</strong> [Date]</p>
+            <div class="agreement-intro">
+                <h2 style="margin-top: 0; color: var(--primary-purple);">Introduction</h2>
+                <p>NOVA AI Inc., a division of Valsoft Corporation Inc. ("NOVA AI," "we," "us," or "our"), is committed to protecting the privacy and security of your information. This Privacy Policy explains how we collect, use, disclose, and safeguard information when you use the Ask-Nova™ AI companion platform (the "Platform" or "Service").</p>
+                <p>This Privacy Policy applies to information collected through the Ask-Nova™ platform and any related services, sales, marketing, or events.</p>
             </div>
-
-            <h2>Introduction</h2>
-
-            <p>NOVA AI Inc., a division of Valsoft Corporation Inc. ("NOVA AI," "we," "us," or "our"), is committed to protecting the privacy and security of your information. This Privacy Policy explains how we collect, use, disclose, and safeguard information when you use the Ask-Nova™ AI companion platform (the "Platform" or "Service").</p>
-
-            <p>This Privacy Policy applies to information collected through the Ask-Nova™ platform and any related services, sales, marketing, or events.</p>
 
             <h2>Information We Collect</h2>
 
@@ -292,7 +304,7 @@
             <p>The Ask-Nova™ platform currently utilizes Google's Gemini large language model to process queries and generate responses. When you interact with the Platform:</p>
             <ul>
                 <li>Your queries are processed by the LLM to generate intelligent responses</li>
-                <li>We may change LLM providers to enhance performance or reduce costs</li>
+                <li>We may change LLM providers to enhance performance</li>
                 <li>LLM providers process data in accordance with their own privacy policies</li>
                 <li>We implement technical safeguards to protect data shared with LLM providers</li>
                 <li>Personal data is minimized in LLM interactions where possible</li>

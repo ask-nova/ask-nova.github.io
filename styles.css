@@ -255,6 +255,14 @@ nav {
   font-size: 1rem;
 }
 
+.nav-links .btn-primary {
+  color: var(--white) !important;
+}
+
+.nav-links .btn-primary:hover {
+  color: var(--white) !important;
+}
+
 .nav-links a:hover {
   color: #5F30D7;
 }
