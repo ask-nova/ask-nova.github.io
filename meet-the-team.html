@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Meet the Ask-Nova Team - The brilliant minds behind the AI-powered healthcare sales platform.">
+    <meta name="keywords" content="team, Ask-Nova, Nova AI, healthcare technology, AI experts, machine learning">
+    <title>Meet the Team | Ask-Nova AI Platform</title>
+    
+    <!-- Preconnect to font services -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BBBR4LG0TZ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-BBBR4LG0TZ');
+    </script>
+    
+    <!-- Team Page Styles -->
+    <style>
+        .team-hero {
+            background: linear-gradient(135deg, var(--primary-purple) 0%, var(--teal-primary) 100%);
+            color: white;
+            padding: 150px 0 100px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .team-hero h1 {
+            color: white;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .team-hero p {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .team-section {
+            padding: 80px 0;
+            background: var(--white);
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .team-card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 2.5rem;
+            text-align: center;
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .team-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-hero);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .team-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .team-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+            border-color: rgba(84, 52, 245, 0.2);
+        }
+        
+        .team-image-wrapper {
+            width: 250px;
+            height: 250px;
+            margin: 0 auto 2rem;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 4px solid var(--light-gray);
+            position: relative;
+            box-shadow: 0 10px 30px rgba(84, 52, 245, 0.2);
+        }
+        
+        .team-image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            filter: grayscale(100%);
+            transition: all 0.3s ease;
+        }
+        
+        .team-image-wrapper:first-child img {
+            object-position: center 30%;
+        }
+        
+        
+        .team-card:hover .team-image-wrapper img {
+            filter: grayscale(0%);
+            transform: scale(1.05);
+        }
+        
+        .team-name {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-purple);
+            margin-bottom: 0.5rem;
+            font-family: var(--font-secondary);
+        }
+        
+        .team-role {
+            font-size: 1.1rem;
+            color: var(--secondary-purple);
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+        
+        .team-description {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            font-size: 1rem;
+        }
+        
+        .team-description strong {
+            color: var(--primary-purple);
+        }
+        
+        @media (max-width: 768px) {
+            .team-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .team-hero p {
+                font-size: 1.1rem;
+            }
+            
+            .team-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .team-image-wrapper {
+                width: 200px;
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">Ask-Nova <img src="assets/nova-icon.png" style="width: 24px; height: 24px; margin-left: 0.5rem; vertical-align: middle;"></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li class="nav-item">
+                    <a href="solutions.html">Solutions</a>
+                    <div class="dropdown-menu">
+                        <a href="nova-pharma-reps.html">&nbsp;&nbsp;Nova for Pharma Reps</a>
+                        <a href="nova-msl.html">&nbsp;&nbsp;Nova for MSL</a>
+                        <a href="nova-kam.html">&nbsp;&nbsp;Nova for KAM</a>
+                        <a href="nova-med-devices.html">&nbsp;&nbsp;Nova for Med Devices</a>
+                        <a href="nova-consumer-health.html">&nbsp;&nbsp;Nova for Consumer Health</a>
+                        <a href="nova-animal-health.html">&nbsp;&nbsp;Nova for Animal Health</a>
+                    </div>
+                </li>
+                <li><a href="integrations.html">Integrations</a></li>
+                <li><a href="meet-the-team.html">Meet the Team</a></li>
+                <li><a href="index.html#contact" class="btn btn-primary">Request Demo</a></li>
+            </ul>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Team Hero Section -->
+    <section class="team-hero">
+        <div class="container">
+            <h1>Meet the Team</h1>
+            <p>The brilliant minds behind Ask-Nova. We're not just building AI—we're revolutionizing how healthcare sales professionals connect, engage, and succeed.</p>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section">
+        <div class="container">
+            <div class="team-grid">
+                <!-- Ludovic -->
+                <div class="team-card">
+                    <div class="team-image-wrapper">
+                        <img src="assets/ludovic.png" alt="Ludovic - Team Leader">
+                    </div>
+                    <h2 class="team-name">Ludovic</h2>
+                    <p class="team-role">The Visionary Captain</p>
+                    <p class="team-description">
+                        Ludovic leads the initiative, the team, and the product with the kind of enthusiasm that makes coffee jealous. When he's not orchestrating our grand vision, he's probably thinking about how to make healthcare sales even more awesome.
+                        <br><br><strong>Fun fact:</strong> He can probably explain the entire Ask-Nova platform faster than you can say "AI Agentic Framework."
+                    </p>
+                </div>
+
+                <!-- Paven -->
+                <div class="team-card">
+                    <div class="team-image-wrapper">
+                        <img src="assets/paven.png" alt="Paven - Agentic Framework Architect">
+                    </div>
+                    <h2 class="team-name">Paven</h2>
+                    <p class="team-role">The Architect of Awesome</p>
+                    <p class="team-description">
+                        Paven is the brain behind our agentic framework and front-end application. If you've ever wondered who makes all those complex AI interactions look effortless, wonder no more! She's the wizard who turns "impossible" into "shipping next week."
+                        <br><br><strong>Fun fact:</strong> Rumor has it she dreams in code, and her front-end designs are so smooth they should come with a warning label.
+                    </p>
+                </div>
+
+                <!-- Qi -->
+                <div class="team-card">
+                    <div class="team-image-wrapper">
+                        <img src="assets/qi.png" alt="Qi - AI & Machine Learning Expert">
+                    </div>
+                    <h2 class="team-name">Qi</h2>
+                    <p class="team-role">The AI Super Genius</p>
+                    <p class="team-description">
+                        Qi is our machine learning guru who makes AI look easy (spoiler: it's not). While the rest of us are still figuring out what "neural network" means, Qi is busy teaching machines to think smarter.
+                        <br><br><strong>Fun fact:</strong> He probably has more conversations with AI models than with humans, and honestly, the AI models are probably more interesting anyway.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Ask-Nova</h4>
+                    <p style="color: var(--medium-gray);">Empowering healthcare sales professionals with AI-driven intelligence and automation.</p>
+                    <div style="margin-top: 1rem;">
+                        <i class="fas fa-shield-alt" style="color: var(--emerald-primary); margin-right: 0.5rem;"></i>
+                        <span style="font-size: 0.9rem;">SOC 2 Certified</span>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Solutions</h4>
+                    <ul>
+                        <li><a>AI Agentic Framework</a></li>
+                        <li><a>Customer Intelligence</a></li>
+                        <li><a>Call Coaching</a></li>
+                        <li><a>Market Analytics</a></li>
+                        <li><a>Integrations</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Industries</h4>
+                    <ul>
+                        <li><a>Pharmaceutical</a></li>
+                        <li><a>Medical Devices</a></li>
+                        <li><a>Biotechnology</a></li>
+                        <li><a>Animal Health</a></li>
+                        <li><a>Healthcare Technology</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a>NOVA AI INC.</a></li>
+                        <li><a>100-7405 rte Transcanadienne</a></li>
+                        <li><a>Montréal (Québec) H4T1Z2</a></li>
+                        <li><a>Canada</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Nova AI Inc. All rights reserved. Ask-Nova is a trademark of Nova AI Inc.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
+
